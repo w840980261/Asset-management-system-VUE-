@@ -1,3 +1,4 @@
+
 ### 运行使用
 
 ```bash
@@ -6,21 +7,8 @@ npm install
 npm start
 ```
 
-需要后端 mock 服务的支持。
-
-2019 年 3 月 15 日更新`db.json`文件，替换掉`server`项目中的`db.json`和`db_backup.json`，目的是为了同步菜单和路由。
-
-```bash
-git clone https://github.com/wjkang/d2-admin-server.git
-
-npm install
-
-npm start
-```
 
 ### 相关概念
-
-![权限模型](img/2019-01-05-10-33-03.png)
 
 - 实现了 RBAC 模型权限控制
 - 菜单与路由独立管理，完全由后端返回
@@ -333,6 +321,77 @@ postService.addPost(data).then(data => {
 })
 ```
 
+### 页面层级结构
+**src/api:** 请求封装
+**src/layout:** 整体布局
+**src/page:** 页面
+
+    ├─asset-management  	 // 资产管理
+    │  ├─asset-allocation		//调拨
+    │  │      allot.vue
+    │  │      detial.vue
+    │  │      index.vue
+    │  │      
+    │  ├─asset-list				//资产列表
+    │  │      detial.vue	
+    │  │      index.vue
+    │  │      
+    │  ├─asset-operations		//领用/归还
+    │  │      detial.vue
+    │  │      index.vue
+    │  │      use.vue
+    │  │      
+    │  ├─asset-scrap			//报废
+    │  │      index.vue
+    │  │      scrap.vue
+    │  │      
+    │  └─asset-transfer			//移交
+    │          detial.vue
+    │          index.vue
+    │          transfer.vue
+    │          
+    ├─error-page-404			//404
+    │      index.js
+    │      page.vue
+    │      
+    ├─finance					//财务
+    │  ├─record					//入账记录
+    │  │      detial.vue
+    │  │      index.vue
+    │  │      
+    │  └─waiting				//等待入账
+    │          detial.vue
+    │          index.vue
+    │          
+    ├─login						//登陆页面
+    │  │  index.js
+    │  │  page.vue
+    │  │  style.scss
+    │          
+    ├─procurement				//采购列表
+    │      detial.vue
+    │      editForm.vue
+    │      index.vue
+    │      
+    ├─stock-in					//入库
+    │  ├─record					//入库记录
+    │  │      detial.vue
+    │  │      index.vue
+    │  │      
+    │  └─waiting				//等待入库
+    │          detial.vue
+    │          index.vue
+    │          
+    └─sys						//系统管理
+        ├─authority-management	//用户管理
+        │      editForm.vue
+        │      index.vue
+        │      
+        └─data-dictionary		//字典管理
+                editForm.vue
+                index.vue
+
+
 ### 开发建议
 
 - 页面级别的组件放到`pages/`目录下，并且在`routerMapCompnonents/index.js`中以 key-value 的形式导出
@@ -349,4 +408,4 @@ postService.addPost(data).then(data => {
 
 - 总之 Happy Coding!!!
 
-Copyright (c) 2019-present Boyafairyland
+
