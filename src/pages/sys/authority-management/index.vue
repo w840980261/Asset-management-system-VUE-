@@ -46,6 +46,7 @@
             title="删除"
             size="mini"
             icon="el-icon-delete"
+            type="danger"
             circle
             @click="Delete(scope.row.id)"
           />
@@ -53,6 +54,7 @@
             title="重置密码"
             size="mini"
             icon="el-icon-setting"
+            type="info"
             circle
             @click="updatePassword(scope.row.id)"
           />

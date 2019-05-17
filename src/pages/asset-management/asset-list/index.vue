@@ -1,14 +1,5 @@
 <template>
   <d2-container>
-    <!-- <el-button type="primary" size="mini" icon="el-icon-circle-plus" @click="openAdd">新增采购单</el-button>
-    <el-button type="warning" size="mini" icon="el-icon-upload" @click="openAdd">导入采购单</el-button> -->
-    <el-button
-      v-if="multipleSelection.length>0"
-      type="danger"
-      size="mini"
-      icon="el-icon-delete"
-      @click="alertDel"
-    >删除</el-button>
     <el-button type="text" style="color:#666;" icon="el-icon-refresh" @click="pageRefresh">刷新</el-button>
     <!-- 表格 -->
     <el-table
@@ -18,9 +9,8 @@
       size="small"
       tooltip-effect="dark"
       style="width: 100%"
-      @selection-change="handleSelectionChange"
     >
-      <el-table-column fixed type="selection" width="30"/>
+      <!--<el-table-column fixed type="selection" width="30"/>-->
       <!-- <el-table-column fixed type="index" label="序号" align="center" width="80" /> -->
       <el-table-column prop="cardId" label="卡片编号" align="center" width="100" />
       <el-table-column prop="assetsId" label="资产编码" align="center" width="200" />

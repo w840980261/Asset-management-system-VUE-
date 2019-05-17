@@ -1,5 +1,5 @@
 <template>
-  <el-dialog :visible.sync="dialogVisible" title="采购详情" @opened="dialogOpen" @closed="dialogClose" width="750px">
+  <el-dialog :visible.sync="dialogVisible" title="财务详情" @opened="dialogOpen" @closed="dialogClose" width="750px">
     <el-row :gutter="20">
       <el-col :span="24">
         <el-card class="detialInofo">

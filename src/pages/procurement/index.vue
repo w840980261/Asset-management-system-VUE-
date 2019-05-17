@@ -1,7 +1,7 @@
 <template>
   <d2-container>
     <el-button type="primary" size="mini" icon="el-icon-circle-plus" @click="openAdd">新增采购单</el-button>
-    <el-button type="warning" size="mini" icon="el-icon-upload" @click="openAdd">导入采购单</el-button>
+    <!--<el-button type="warning" size="mini" icon="el-icon-upload" @click="openAdd">导入采购单</el-button>-->
     <el-button
       v-if="multipleSelection.length>0"
       type="danger"

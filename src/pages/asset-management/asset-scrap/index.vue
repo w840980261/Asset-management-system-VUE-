@@ -18,25 +18,6 @@
       <el-table-column prop="notifier" label="申报人" align="center" width="100"/>
       <el-table-column prop="scrapTime" label="报废时间" align="center"/>
       <el-table-column prop="note" label="备注" show-overflow-tooltip/>
-      <!-- <el-table-column fixed="right" label="操作" align="center" width="60px">
-        <template slot-scope="scope">
-          <el-button
-            title="查看"
-            size="mini"
-            icon="el-icon-view"
-            circle
-            @click="showDetial(scope.row)"
-          />
-          <el-button
-            title="核对"
-            v-if="scope.row.alc==true"
-            size="mini"
-            icon="el-icon-view"
-            circle
-            @click="showDetial(scope.row)"
-          />
-        </template>
-      </el-table-column> -->
     </el-table>
 
     <template slot="footer">

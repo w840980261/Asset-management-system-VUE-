@@ -1,8 +1,6 @@
 <template>
   <d2-container>
-    <template slot="header">
-      <el-button type="text" style="color:#666;" icon="el-icon-refresh" @click="pageRefresh">刷新</el-button>
-    </template>
+    <el-button type="text" style="color:#666;" icon="el-icon-refresh" @click="pageRefresh">刷新</el-button>
     <!-- 表格 -->
     <el-table
       v-loading="loading"
@@ -12,9 +10,8 @@
       size="small"
       tooltip-effect="dark"
       style="width: 100%"
-      @selection-change="handleSelectionChange"
     >
-      <el-table-column fixed type="selection" width="30"/>
+      <!--<el-table-column fixed type="selection" width="30"/>-->
       <el-table-column fixed type="index" label="序号" align="center" width="80" />
       <el-table-column prop="orderNo" label="采购单号" align="center" width="200"/>
       <el-table-column prop="totalPrice" label="总价" align="center"/>
@@ -42,14 +39,14 @@
             circle
             @click="showDetial(scope.row)"
           />
-          <el-button
+          <!-- <el-button
             type="primary"
             title="下载"
             size="mini"
             icon="el-icon-download"
             circle
             @click="download(scope.row.orderNo)"
-          />
+          /> -->
           <el-button
             type="success"
             title="入账"
@@ -162,8 +159,7 @@ export default {
         cancelButtonText: '取消'
       }).then(() => {
         const data = {
-          'entryOperator': 'yangzaiqiong',
-          'oderNoList': [id]
+          'orderNoList': [id]
         }
         billActionService.InBill(data).then(() => {
           if (!data.hasOwnProperty('code')) {

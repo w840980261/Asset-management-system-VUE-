@@ -41,12 +41,12 @@
                 </el-form-item>
               </el-col>
               <el-col :span="8">
-                <el-form-item label="凭证号" prop="accountId">
+                <!-- <el-form-item label="凭证号" prop="accountId">
                   <el-input v-model="form.summaryAssets.accountId"></el-input>
                 </el-form-item>
                 <el-form-item label="保管人" prop="depository">
                   <el-input v-model="form.summaryAssets.depository"></el-input>
-                </el-form-item>
+                </el-form-item> -->
                 <el-form-item label="使用年限" prop="lifeFactor">
                   <el-input v-model="form.summaryAssets.lifeFactor"></el-input>
                 </el-form-item>
@@ -199,7 +199,6 @@ export default {
       if (this.purchaseDetailSet.length > 0) {
         this.loading = true
         const param = {
-          'operator': 'yangzaiqiong', // 类型：String  必有字段  备注：操作员
           'remark': '', // 类型：String  可有字段  备注：备注——可为空
           'purchaseDetailSet': this.purchaseDetailSet
         }

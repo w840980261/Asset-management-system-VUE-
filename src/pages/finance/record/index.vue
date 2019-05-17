@@ -1,9 +1,7 @@
 <template>
   <d2-container>
-    <template slot="header">
-      <el-button type="text" style="color:#666;" icon="el-icon-refresh" @click="pageRefresh">刷新</el-button>
-    </template>
-    <!-- 表格 -->
+		<el-button type="text" style="color:#666;" icon="el-icon-refresh" @click="pageRefresh">刷新</el-button>
+		<!-- 表格 -->
     <el-table
       v-loading="loading"
       ref="multipleTable"
@@ -12,9 +10,8 @@
       size="small"
       tooltip-effect="dark"
       style="width: 100%"
-      @selection-change="handleSelectionChange"
     >
-      <el-table-column fixed type="selection" width="30"/>
+      <!--<el-table-column fixed type="selection" width="30"/>-->
       <el-table-column fixed type="index" label="序号" align="center" width="80" />
       <el-table-column prop="orderNo" label="采购单号" align="center" width="200"/>
       <el-table-column prop="totalPrice" label="总价" align="center"/>

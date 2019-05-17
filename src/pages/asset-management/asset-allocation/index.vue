@@ -43,7 +43,7 @@
             title="核对"
             v-if="scope.row.alc==true"
             size="mini"
-            type="primary"
+            type="success"
             icon="el-icon-check"
             circle
             @click="check(scope.row.allotId)"

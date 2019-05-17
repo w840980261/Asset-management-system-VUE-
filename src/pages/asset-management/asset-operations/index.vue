@@ -42,7 +42,7 @@
             title="归还"
             v-if="scope.row.getState==1&&role=='admin'"
             size="mini"
-            type="primary"
+            type="success"
             icon="el-icon-check"
             circle
             @click="check(scope.row.receiveId)"
